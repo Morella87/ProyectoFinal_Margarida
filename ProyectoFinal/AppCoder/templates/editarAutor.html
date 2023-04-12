@@ -1,0 +1,27 @@
+{% extends 'inicio.html' %}
+
+{% load static %}
+
+{% block herencia %}
+   
+    <h1>Formulario - Editar Autoe</h1>
+    
+    {% if  miFormularioAutor.errors %}
+
+    <p style="color: red;"> Están mal los datos, revisar</p>
+
+    {% endif %}
+
+    <form action="" method="POST">{% csrf_token %}
+       
+        <table>
+
+            {{  miFormularioAutor.as_table }}
+
+        </table>
+
+        <input type="submit", value="Enviar">
+
+    </form>
+  
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'inicio.html' %}
+
+{% load static %}
+
+{% block herencia %}
+    
+    <h1>Listado de Autores:</h1>
+
+   <ul>
+    {% for a in autores %}
+        <li>{{a}}</li>
+        <button><a href="{% url 'EliminarAutor' a.nombreaut %}">Borrar</a></button>
+        <button><a href="{% url 'EditarAutor' a.nombreaut %}">Editar</a></button>
+        <br>
+    {% endfor %}
+    </ul>
+    <p>
+        <a href="formularioAutor">Agregar</a>
+        
+    </p>       
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'inicio.html' %}
+
+{% load static %}
+
+{% block herencia %}
+
+    <h1>Formulario - Agregar Libro</h1>
+    
+    {% if miFormularioLibro.errors %}
+
+    <p style="color: red;"> Están mal los datos, revisar</p>
+
+    {% endif %}
+
+    <form method="POST" enctype="multipart/form-data">{% csrf_token %}
+
+        <table>
+
+            {{ miFormularioLibro.as_table }}
+
+        </table>
+        <img width="40px" src="{{ Texto.tapaLibro.url }}">
+        <input type="submit", value="Enviar">
+
+    </form>
+    
+{% endblock %}
+

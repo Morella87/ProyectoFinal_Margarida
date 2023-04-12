@@ -1,0 +1,27 @@
+{% extends 'inicio.html' %}
+
+{% load static %}
+
+{% block herencia %}
+    
+    <h1>Formulario - Editar Libro</h1>
+    
+    {% if  miFormularioLibro.errors %}
+
+    <p style="color: red;"> Están mal los datos, revisar</p>
+
+    {% endif %}
+
+    <form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+       
+        <table>
+
+            {{  miFormularioLibro.as_table }}
+
+        </table>
+
+        <input type="submit", value="Enviar">
+
+    </form> 
+
+{% endblock %}

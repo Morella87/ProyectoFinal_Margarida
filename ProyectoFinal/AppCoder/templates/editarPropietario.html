@@ -1,0 +1,31 @@
+{% extends 'inicio.html' %}
+
+{% load static %}
+
+{% block herencia %}
+
+    <h1>Formulario - Agregar Propietario</h1>
+    
+    {% if  miFormularioPropietario.errors %}
+
+    <p style="color: red;"> Están mal los datos, revisar</p>
+
+    {% endif %}
+
+
+    <form action="" method="POST">{% csrf_token %}
+
+       
+        <table>
+
+            {{  miFormularioPropietario.as_table }}
+
+
+        </table>
+
+
+        <input type="submit", value="Enviar">
+
+    </form>
+    
+{% endblock %}

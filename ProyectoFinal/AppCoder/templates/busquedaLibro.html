@@ -1,0 +1,17 @@
+{% extends 'inicio.html' %}
+
+{% load static %}
+
+{% block herencia %}
+
+    <p>Escribir el titulo del libro que esta buscando:</p>
+
+    <form action="buscar/" method="GET">
+
+        <input type="text", name="tituloLibro", id="tituloLibro">
+
+        <input type="submit", value="Buscar">
+
+    </form>
+
+{% endblock %}

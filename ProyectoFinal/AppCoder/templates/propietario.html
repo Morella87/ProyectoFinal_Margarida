@@ -1,0 +1,22 @@
+{% extends 'inicio.html' %}
+
+{% load static %}
+
+{% block herencia %}
+
+    <h1>Listado de Propietarios:</h1>
+        
+    <ul>   
+    {% for p in propietarios %}
+        <li>{{p}}</li>
+        <button><a href="{% url 'EliminarPropietario' p.nombre %}">Borrar</a></button>
+        <button><a href="{% url 'EditarPropietario' p.nombre %}">Modificar</a></button>
+        <br>
+    {% endfor %}      
+    </ul>    
+    <p>
+        <a href="formularioPropietario">Agregar</a>
+        
+    </p>    
+
+{% endblock %}

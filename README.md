@@ -1,6 +1,6 @@
 # ProyectoFinal_Margarida
 Proyecto final desarrollado en Python usando el framework Django. 
-El proyecto es una pagina web destinada a una biblioteca digital, en esta se va a mostrar la informacion que tenemos almacenada en la base de datos medinte distintas vistas.
+El proyecto es una pagina web destinada a una biblioteca digital, en esta se va a mostrar la informacion que tenemos almacenada en la base de datos mediante distintas vistas.
 
 1. Moverse a la carpeta del proyecto ejecutando:
 
